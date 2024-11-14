@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <h1>Nurbek`s Recipe App</h1>
+        <input type="text" id="searchInput" placeholder="Search for recipes...">
+    </header>
+
+    <main>
+        <section id="recipeGrid" class="grid"></section>
+
+        <section id="favoritesSection">
+            <h2>Your Favorites</h2>
+            <div id="favoritesGrid" class="grid"></div>
+        </section>
+    </main>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="recipeDetails"></div>
+        </div>
+    </div>
+
+    <script src="js/javaS.js"></script>
+</body>
+</html>

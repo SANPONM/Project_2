@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <h2>Nurbek's Movie APP</h2>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search movies...">
+            <button id="search-button" class="bx bx-search-alt"></button>
+        </div>
+
+        <div class="sort-options">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+                <option value="popularity.desc">Popularity</option>
+                <option value="release_date.desc">Release Date</option>
+                <option value="vote_average.desc">Rating</option>
+            </select>
+        </div>
+    </header>
+    
+    <main>
+        <section class="movies-container" id="movies-container">
+        </section>
+
+        <div class="modal" id="movie-modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-modal">&times;</span>
+                <div class="modal-body" id="modal-body">
+                </div>
+            </div>
+        </div>
+
+        <section class="watchlist-section">
+            <h3>Your Watchlist</h3>
+            <div class="watchlist-container" id="watchlist-container">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nurbek's Movie APP</p>
+    </footer>
+
+    <script src="js/javas.js"></script>
+</body>
+</html>

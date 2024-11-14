@@ -1,0 +1,359 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+    background-color: #353131;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1780px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFF;
+}
+
+header {
+    background-color: #464040;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-wrapper {
+    margin-bottom: 20px;
+}
+
+.header-wrapper h2 {
+    font-size: 36px;
+    color: #FFF;
+    text-align: center;
+    margin: 0;
+}
+
+.search-box {
+    position: relative;
+    width: 60%;
+    max-width: 500px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+    border: none;
+    border-radius: 25px;
+    padding: 0 20px 0 50px;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.search-box input::placeholder {
+    color: #CCC;
+}
+
+.search-box button {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    color: #FFD700;
+}
+
+.sort-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.sort-options label {
+    color: #FFF;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.sort-options select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #FFF;
+}
+
+.movie-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.movie-release-date {
+    font-size: 14px;
+    color: #666;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 50px auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-body h2 {
+    margin-bottom: 10px;
+}
+
+.modal-body p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-body .additional-info {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.additional-info h3 {
+    margin-bottom: 10px;
+}
+
+.additional-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.additional-info li {
+    margin-bottom: 5px;
+}
+.watchlist-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.watchlist-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.watchlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.watchlist-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.watchlist-card img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+}
+
+.watchlist-card .watchlist-info {
+    padding: 10px;
+}
+
+.watchlist-card .watchlist-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.watchlist-card .remove-watchlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.watchlist-card .remove-watchlist:hover {
+    background: rgba(255,255,255,1);
+}
+
+footer {
+    background-color: #464040;
+    color: #FFF;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        width: 80%;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .modal-body img {
+        width: 100%;
+    }
+
+    .sort-options {
+        flex-direction: column;
+    }
+
+    .sort-options label,
+    .sort-options select {
+        margin-bottom: 10px;
+    }
+}
+
+#add-watchlist {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#add-watchlist:hover {
+    background-color: #ff4a4a;
+}
